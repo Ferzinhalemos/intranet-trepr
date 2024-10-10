@@ -12,7 +12,7 @@ class TestPortalSettings:
         "key,expected",
         [
             ["plone.site_title", "Intranet do TRE-PR"],
-            ["plone.email_from_name", "Intranet do TRE-PR"],
+            ["plone.email_from_name", "Intranet TRE-PR"],
             ["plone.smtp_host", "localhost"],
             ["plone.smtp_port", 25],
         ],
