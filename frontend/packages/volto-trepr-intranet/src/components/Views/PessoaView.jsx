@@ -4,6 +4,7 @@ import { Container } from '@plone/components';
 import { Image } from '@plone/volto/components';
 import ContactInfo from '../ContactInfo/ContactInfo';
 import EnderecoInfo from '../EnderecoInfo/EnderecoInfo';
+
 const PessoaView = (props) => {
   const { content } = props;
   return (
@@ -19,6 +20,11 @@ const PessoaView = (props) => {
             responsive={true}
           />
         </Container>
+      )}
+      {content.cargo && (
+        <span className={`cargo cargo-${content.cargo.token}`}>
+          {content.cargo.title}
+        </span>
       )}
       <h1 className="documentFirstHeading">{content.title}</h1>
       {content.description && (
