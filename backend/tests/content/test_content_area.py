@@ -57,18 +57,14 @@ class TestArea:
         assert behavior in get_behaviors(CONTENT_TYPE)
 
     @pytest.mark.parametrize(
-        "behavior",
+        "role,allowed",
         [
-            "plone.basic",
-            "plone.namefromtitle",
-            "plone.shortname",
-            "plone.excludefromnavigation",
-            "plone.versioning",
-            "trepr.intranet.behavior.contato",
-            "trepr.intranet.behavior.endereco",
-            "volto.blocks",
-            "plone.constraintypes",
-            "volto.preview_image",
+            ["Manager", True],
+            ["Site Administrator", True],
+            ["Editor", False],
+            ["Reviewer", False],
+            ["Contributor", False],
+            ["Reader", False],
         ],
     )
     def test_create(self, area_payload, role: str, allowed: bool):
