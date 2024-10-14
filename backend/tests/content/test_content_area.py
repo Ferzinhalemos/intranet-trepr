@@ -56,6 +56,21 @@ class TestArea:
     def test_has_behavior(self, get_behaviors, behavior):
         assert behavior in get_behaviors(CONTENT_TYPE)
 
+    @pytest.mark.parametrize(
+        "behavior",
+        [
+            "plone.basic",
+            "plone.namefromtitle",
+            "plone.shortname",
+            "plone.excludefromnavigation",
+            "plone.versioning",
+            "trepr.intranet.behavior.contato",
+            "trepr.intranet.behavior.endereco",
+            "volto.blocks",
+            "plone.constraintypes",
+            "volto.preview_image",
+        ],
+    )
     def test_create(self, area_payload, role: str, allowed: bool):
         with api.env.adopt_roles([role]):
             if allowed:
