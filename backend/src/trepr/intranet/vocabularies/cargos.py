@@ -6,7 +6,7 @@ from zope.schema.vocabulary import SimpleVocabulary
 
 OPCOES = [
     ("servidor", "Servidor"),
-    ("terceiro", "Tercerizado"),
+    ("terceiro", "Terceirizado"),
 ]
 
 
