@@ -55,4 +55,19 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="trepr.intranet:default"
+      source="1004"
+      destination="1005"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona tipo Pessoa"
+        import_steps="typeinfo"
+        />
+    <genericsetup:upgradeDepends
+        title="Aplica permissionamento para tipo de conteúdo Pessoa"
+        import_steps="rolemap"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>
