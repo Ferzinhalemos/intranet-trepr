@@ -46,6 +46,8 @@ class TestArea:
             "plone.shortname",
             "plone.excludefromnavigation",
             "plone.versioning",
+            "trepr.intranet.behavior.contato",
+            "trepr.intranet.behavior.endereco",
             "volto.blocks",
             "plone.constraintypes",
             "volto.preview_image",
@@ -54,17 +56,6 @@ class TestArea:
     def test_has_behavior(self, get_behaviors, behavior):
         assert behavior in get_behaviors(CONTENT_TYPE)
 
-    @pytest.mark.parametrize(
-        "role,allowed",
-        [
-            ["Manager", True],
-            ["Site Administrator", True],
-            ["Editor", False],
-            ["Reviewer", False],
-            ["Contributor", False],
-            ["Reader", False],
-        ],
-    )
     def test_create(self, area_payload, role: str, allowed: bool):
         with api.env.adopt_roles([role]):
             if allowed:
