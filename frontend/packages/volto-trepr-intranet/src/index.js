@@ -1,3 +1,5 @@
+// Blocks
+import AreaGridItem from './components/Blocks/Grid/AreaGridItem';
 // Views
 import AreaView from './components/Views/AreaView';
 import PessoaView from './components/Views/PessoaView';
@@ -23,6 +25,14 @@ const applyConfig = (config) => {
       },
     ],
   };
+
+  // Blocos
+  /// Grid
+  config.registerComponent({
+    name: 'GridListingItemTemplate',
+    component: AreaGridItem,
+    dependencies: 'Area',
+  });
 
   // Views
   config.views.contentTypesViews = {
