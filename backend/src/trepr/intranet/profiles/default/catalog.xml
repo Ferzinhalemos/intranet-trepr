@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object name="portal_catalog">
-  <!-- Index
+  <index meta_type="FieldIndex"
+         name="cargo"
+  >
+    <indexed_attr value="cargo" />
+  </index>
+  <index meta_type="FieldIndex"
+         name="area"
+  >
+    <indexed_attr value="area" />
+  </index>
+</object><!-- Index
   <index meta_type="FieldIndex"
          name="industry"
   >
     <indexed_attr value="industry" />
   </index>
--->
-  <!-- Metadata
+--><!-- Metadata
   <column value="industry" />
 -->
-</object>

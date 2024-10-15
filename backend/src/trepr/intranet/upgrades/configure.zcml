@@ -85,4 +85,15 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="trepr.intranet:default"
+      source="1006"
+      destination="1007"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona filtros por Área e Cargo"
+        import_steps="plone.app.registry"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>
