@@ -70,4 +70,19 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="trepr.intranet:default"
+      source="1005"
+      destination="1006"
+      >
+    <genericsetup:upgradeDepends
+        title="Indexa os campos Area e Cargo "
+        import_steps="catalog"
+        />
+    <upgradeStep
+        title="Reindexa o tipo Pessoa"
+        handler=".catalog.reindexa_pessoa"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>
