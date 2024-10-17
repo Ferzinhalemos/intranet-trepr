@@ -1,0 +1,13 @@
+.block.listing.icon-template {
+  .items {
+    .listing-item {
+      svg.icon {
+        padding: $spacing-small;
+        border-radius: 50%;
+        margin-right: $spacing-small;
+        background-color: lightblue;
+        color: white;
+      }
+    }
+  }
+}
