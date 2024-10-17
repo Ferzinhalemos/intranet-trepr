@@ -1,4 +1,6 @@
 import { cloneDeep } from 'lodash';
+// reducers
+import { climaData } from './reducers/climaData';
 // Blocks
 /// Clima
 import ClimaEdit from './components/Blocks/Clima/Edit';
@@ -94,6 +96,12 @@ const applyConfig = (config) => {
     Area: AreaView,
     Pessoa: PessoaView,
   };
+
+  config.addonReducers = {
+    ...config.addonReducers,
+    climaData,
+  };
+
   return config;
 };
 
