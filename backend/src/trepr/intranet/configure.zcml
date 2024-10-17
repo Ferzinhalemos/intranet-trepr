@@ -18,6 +18,7 @@
   <include package=".controlpanel" />
   <include package=".indexers" />
   <include package=".serializers" />
+  <include package=".services" />
   <include package=".vocabularies" />
   <include package=".behaviors" />
 
