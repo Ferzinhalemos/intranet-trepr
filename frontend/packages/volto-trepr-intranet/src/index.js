@@ -1,3 +1,5 @@
+/// Listing
+import IconListingTemplate from './components/Blocks/Listing/IconListingTemplate';
 // Blocks
 import AreaGridItem from './components/Blocks/Grid/AreaGridItem';
 // Views
@@ -25,6 +27,17 @@ const applyConfig = (config) => {
       },
     ],
   };
+
+  /// Listing
+  //// Listing Variations
+  config.blocks.blocksConfig.listing.variations = [
+    ...config.blocks.blocksConfig.listing.variations,
+    {
+      id: 'icon-template',
+      title: 'Ícones',
+      template: IconListingTemplate,
+    },
+  ];
 
   // Blocos
   /// Grid
